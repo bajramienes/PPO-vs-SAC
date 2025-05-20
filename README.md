@@ -96,17 +96,15 @@ The main libraries used in this project include:
 
 See `requirements.txt` for full details.
 
-## License
+## Usage and Access
 
-This project is licensed under the MIT License.  
-You are free to use, modify, and distribute this work with proper attribution.
+This code and dataset are provided for academic review and reproducibility purposes only. Redistribution, modification, or use in commercial projects is not permitted without explicit permission from the authors.
 
 ## Author
-
 Enes Bajrami  
 PhD Candidate in Software Engineering and Artificial Intelligence  
-Faculty of Computer Science and Engineering
-Ss. Cyril and Methodius University
+Faculty of Computer Science and Engineering - Ss. Cyril and Methodius University
+enes.bajrami@students.finki.ukim.mk
 
 ## Acknowledgments
 

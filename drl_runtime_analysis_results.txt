@@ -1,0 +1,18 @@
+--- PPO Results ---
+Total Episodes: 3000
+Steps per Episode: 10
+Training Time: 70.45 seconds
+CPU Usage Start: 0.0% End: 0.0%
+RAM Usage Start: 81.2% End: 81.1%
+GPU Usage Start: 0.00% End: 0.00%
+GPU Memory Usage Start: 0.00% End: 0.00%
+
+--- SAC Results ---
+Total Episodes: 3000
+Steps per Episode: 10
+Training Time: 110.09 seconds
+CPU Usage Start: 31.0% End: 35.7%
+RAM Usage Start: 80.9% End: 79.6%
+GPU Usage Start: 0.00% End: 0.00%
+GPU Memory Usage Start: 0.00% End: 0.00%
+

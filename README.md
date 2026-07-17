@@ -1,107 +1,153 @@
+# PPO vs SAC for Country-Level Energy Optimization
 
-# PPO vs SAC: Comparative Analysis for Energy Optimization with Country-Level Insights
+[![Journal](https://img.shields.io/badge/Journal-IFAC%20Journal%20of%20Systems%20and%20Control-blue)](https://doi.org/10.1016/j.ifacsc.2025.100344)
+[![DOI](https://img.shields.io/badge/DOI-10.1016%2Fj.ifacsc.2025.100344-green)](https://doi.org/10.1016/j.ifacsc.2025.100344)
+[![Python](https://img.shields.io/badge/Python-3.11+-yellow)]()
 
-This repository contains the full implementation and comparative analysis of two advanced Deep Reinforcement Learning (DRL) algorithms—Proximal Policy Optimization (PPO) and Soft Actor-Critic (SAC)—for national-scale energy optimization. The study uses real-world energy datasets to evaluate the performance of PPO and SAC in terms of stability, computational efficiency, and policy effectiveness. The project also explores regional comparisons (Balkan vs Nordic countries) for renewable integration and carbon intensity insights.
+Official implementation accompanying the paper:
 
-## 📂 Folder Structure
+> **A Comparative Analysis of PPO and SAC Algorithms for Energy Optimization with Country-Level Energy Consumption Insights**
 
-```
-PPO_vs_SAC/
-├── __pycache__/                  # Python cache files
-├── countries_compare/            # Balkan vs Nordic comparison charts
-├── NEW CHARTS/                   # Updated result charts
-├── NEW CHARTS -1/                # Additional comparative charts
-├── new-chart-1/                  # Boxplots and trend charts
-├── results/                      # Algorithm metric charts (PPO vs SAC)
-├── balkan_vs_nordic.py           # Regional comparison script
-├── balkan_vs_nordic_specific.py  # Additional regional comparison logic
-├── drl_metrics_comparison.pdf    # Comparative PDF report of DRL metrics
-├── drl_runtime_analysis.py       # Runtime complexity analysis script
-├── drl_runtime_analysis_results  # Saved results of runtime analysis
-├── energy_drl_comparison.py      # DRL model comparison logic
-├── evaluation.py                 # Evaluation metrics script
-├── ppo_agent.py                  # PPO agent implementation
-├── sac_agent.py                  # SAC agent implementation
-├── ppo_vs_sac.py                 # PPO vs SAC main comparison script
-├── ppo_vs_sac_metrics.py         # Metrics generation (variance, speed, scores)
-├── requirements.txt              # Python dependencies
-├── README.md                     # Project description file
-└── World Energy Consumption.xlsx # Input dataset (2000–2023 country-level indicators)
-```
+Published in **IFAC Journal of Systems and Control (Elsevier), Volume 34, 2025**.
 
-## 🚀 Highlights
+---
 
-- **Agents:** PPO and SAC implemented using PyTorch and Stable Baselines 3.
-- **Metrics:** Action variance, execution speed (episodes/sec), average action scores.
-- **Regional Analysis:** Comparative insights between Balkan and Nordic countries.
-- **Figures:** Publication-ready charts (PDF/SVG) for LaTeX integration.
-- **Reproducibility:** Scripts aligned with Q1 journal standards.
+# Overview
 
-## 🖥️ Running the Project
+This repository contains the experimental implementation used in the paper, where **Proximal Policy Optimization (PPO)** and **Soft Actor-Critic (SAC)** are evaluated for country-level energy optimization using real-world energy indicators.
 
-1. Clone the repository:
-```bash
-git clone https://github.com/bajramienes/PPO-vs-SAC.git
-```
+Unlike studies relying solely on simulated environments, the proposed framework utilizes historical national energy data, including electricity generation, greenhouse gas emissions, renewable energy share, fossil fuel dependency, solar energy production, and oil consumption, enabling realistic evaluation across heterogeneous energy systems.
 
-2. Navigate to the project folder:
-```bash
-cd PPO-vs-SAC
-```
+The repository includes:
 
-3. (Optional) Create a virtual environment:
-```bash
-python -m venv venv
-# Activate on Windows
-venv\Scripts\activate
-# Or on Linux/Mac
-source venv/bin/activate
-```
+- PPO implementation
+- SAC implementation
+- Rule-based baseline
+- Multi-phase training and evaluation
+- Regional analysis (Balkan vs Nordic countries)
+- Publication-quality charts
+- Experimental results
+- Dataset preprocessing scripts
 
-4. Install dependencies:
-```bash
-pip install -r requirements.txt
+---
+
+# Paper
+
+Enes Bajrami, Andrea Kulakov, Eftim Zdravevski and Petre Lameski.
+
+**A Comparative Analysis of PPO and SAC Algorithms for Energy Optimization with Country-Level Energy Consumption Insights**
+
+IFAC Journal of Systems and Control, Volume 34, 2025.
+
+DOI
+
+https://doi.org/10.1016/j.ifacsc.2025.100344
+
+---
+
+# Repository Structure
+
+```text
+.
+├── charts/                         Publication-quality figures used in the paper
+├── data/                           World Energy Consumption dataset
+├── results/                        Experimental outputs and evaluation results
+├── src/                            Source code (PPO, SAC, evaluation, analysis)
+├── README.md                       Repository documentation
+├── requirements.txt                Python dependencies
+└── drl_runtime_analysis_results.txt Runtime analysis results
 ```
 
-5. Run PPO vs SAC training:
-```bash
-python ppo_vs_sac.py
+---
+
+# Evaluated Algorithms
+
+The following methods are evaluated in this study:
+
+- Proximal Policy Optimization (PPO)
+- Soft Actor-Critic (SAC)
+- Rule-based baseline
+
+---
+
+# Experimental Environment
+
+- Python
+- PyTorch
+- Stable-Baselines3
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+
+Experiments were performed using real-world country-level energy data covering multiple sustainability indicators and evaluated across several training phases ranging from 300 to 3000 episodes.
+
+---
+
+# Dataset
+
+The framework uses the **World Energy Consumption** dataset containing national energy indicators including:
+
+- Electricity generation
+- Greenhouse gas emissions
+- Renewable energy share
+- Fossil fuel dependency
+- Solar energy production
+- Oil consumption
+
+The paper also includes a regional comparison between Balkan and Nordic countries using these indicators.
+
+---
+
+# Evaluation
+
+The paper evaluates PPO and SAC using:
+
+- Cumulative Reward
+- Action Variance
+- Execution Speed
+- Average Action Score
+- Regional Performance Comparison
+- Policy Stability
+
+---
+
+# Citation
+
+If you use this repository in your research, please cite:
+
+```bibtex
+@article{BAJRAMI2025100344,
+  title   = {A comparative analysis of PPO and SAC algorithms for energy optimization with country-level energy consumption insights},
+  journal = {IFAC Journal of Systems and Control},
+  volume  = {34},
+  pages   = {100344},
+  year    = {2025},
+  issn    = {2468-6018},
+  doi     = {10.1016/j.ifacsc.2025.100344},
+  url     = {https://www.sciencedirect.com/science/article/pii/S2468601825000501},
+  author  = {Enes Bajrami and Andrea Kulakov and Eftim Zdravevski and Petre Lameski}
+}
 ```
 
-6. Generate metrics and regional charts:
-```bash
-python ppo_vs_sac_metrics.py
-python balkan_vs_nordic.py
-python new_chart_1.py
-```
+---
 
-7. Measure computational complexity:
-```bash
-python drl_runtime_analysis.py
-```
+# License
 
-## 📊 Dataset
+This repository is released for academic and research purposes.
 
-- **Source:** World Energy Consumption Dataset (Kaggle)  
-- Covers indicators like greenhouse gas emissions, renewable/fossil share, electricity generation for 2000–2023.
+Please cite the associated publication when using this code or any derived results.
 
-## 📦 Requirements
+---
 
-- Python 3.8+
-- Torch
-- Stable Baselines 3
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- psutil, GPUtil (for runtime analysis)
+# Contact
 
-## 📄 License
+**Enes Bajrami**
 
-This repository is provided for academic purposes only. 
+Faculty of Computer Science and Engineering (FINKI)
 
-## 👨‍💻 Author
+Ss. Cyril and Methodius University in Skopje
 
-**Enes Bajrami**  
-PhD Candidate 
-Ss. Cyril and Methodius University - Faculty of Computer Science and Engineering (FCSE)
-📧 enes.bajrami@students.finki.ukim.mk
+Email
 
+enes.bajrami@students.finki.ukim.mk
